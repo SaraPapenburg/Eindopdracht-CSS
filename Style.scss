@@ -1,0 +1,183 @@
+@import './variables';
+@import './universal';
+
+#card{
+    font-family: sans-serif;
+    background-color: #c3cfe2;
+    border-radius: $borderradius;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 10px;
+}
+
+main{
+    background-color: #fff;
+    color:$color;
+    text-align: center;
+    font-size: 28px;
+    border-top-left-radius: $borderradius;
+    border-top-right-radius: $borderradius;
+    padding: 20px;
+    img{
+        position:relative;
+        border-radius: 120px;
+        bottom: -60px;
+        margin-bottom: 10px;
+        z-index: +1;
+    }
+}
+
+footer{
+    background-color: #686de0;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: $borderradius;
+    border-bottom-right-radius: $borderradius;
+    padding:50px;
+    h3{
+        color: lightgray;
+    }
+}
+
+.testimonial{
+    border: 2px solid $color;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px $color;
+    padding-bottom: 0px;
+    box-sizing: content-box;
+    width: 400px;
+}
+
+.portfolio{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px;
+    grid-gap: 40px;
+    position: relative;
+}
+    
+.grid-item{
+    width: 70%;
+    position: relative;
+    &:hover{
+        background-color: black;
+        position: relative;
+        transition-duration: 100ms;
+        transition-timing-function: ease-in-out;
+    }
+  }
+  
+
+img{
+    width: 100%;
+    } 
+   
+.button{
+  position: absolute;
+  align-items:flex-end;
+  margin-top: 150px;
+  margin-left:-200px;
+  opacity: 0;
+} 
+
+.button:hover {
+transition-duration: 100ms;
+transition-timing-function: ease-in-out;
+opacity: 1;
+}
+
+.grid-item:hover img {
+  opacity: 0;
+          transition-duration: 1s;
+          transition-timing-function: ease-in-out;
+}
+
+.social-media{
+  position: fixed;
+  right: 0;
+  top: 30px;
+}
+
+.wrapper{
+  font-size: 1rem;
+  text-align: end;
+  color: white;
+  width: 100px;
+  .blog{
+  background-color: #e17b77;
+  width: 50px;
+  height: 50px;
+  &:hover {
+    width: 100px;
+    transition: width 2s;
+  }
+  }
+  .linkedin{
+    width: 50px;
+    height: 50px;
+    &:hover{
+      width: 100px;
+      transition: width 2s;
+    }
+  }
+  .facebook{
+    height: 50px;
+    width: 50px;
+    &:hover{
+      width: 100px;
+      transition: width 2s;
+    }
+  }
+  .twitter{
+      height: 50px;
+      width: 50px;
+      &:hover{
+        width: 100px;
+        transition: width 2s;
+      }
+  }
+  .github{
+      height: 50px;
+      width: 50px;
+      &:hover{
+        width: 100px;
+        transition: width 2s;
+      }
+    }
+
+}
+
+@media(min-width:360px)
+  {
+   .portfolio{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     grid-template-rows: repeat(1,1fr);
+   }
+  }
+
+@media  (min-width: 720px)
+  {
+   .portfolio{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-template-rows: repeat(4, 1fr);
+     grid-gap: 40px;
+   }
+   .button{
+       margin-left: -150px;
+       margin-top: 100px
+   }
+  }
+  
+@media (min-width: 1024px)
+  {
+    .portfolio{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-area: 40px;
+    }
+  }

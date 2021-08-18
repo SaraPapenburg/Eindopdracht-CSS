@@ -1,0 +1,225 @@
+* {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#card {
+  font-family: sans-serif;
+  background-color: #c3cfe2;
+  border-radius: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 10px;
+}
+
+main {
+  background-color: #fff;
+  color: grey;
+  text-align: center;
+  font-size: 28px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px;
+}
+
+main img {
+  position: relative;
+  border-radius: 120px;
+  bottom: -60px;
+  margin-bottom: 10px;
+  z-index: +1;
+}
+
+footer {
+  background-color: #686de0;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 50px;
+}
+
+footer h3 {
+  color: lightgray;
+}
+
+.testimonial {
+  border: 2px solid grey;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 5px grey;
+          box-shadow: 2px 2px 5px grey;
+  padding-bottom: 0px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 400px;
+}
+
+.portfolio {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 80px;
+      grid-template-rows: 80px;
+  grid-gap: 40px;
+  position: relative;
+}
+
+.grid-item {
+  width: 70%;
+  position: relative;
+}
+
+.grid-item:hover {
+  background-color: black;
+  position: relative;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+img {
+  width: 100%;
+}
+
+.button {
+  position: absolute;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 150px;
+  margin-left: -200px;
+  opacity: 0;
+}
+
+.button:hover {
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+.grid-item:hover img {
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.social-media {
+  position: fixed;
+  right: 0;
+  top: 30px;
+}
+
+.wrapper {
+  font-size: 1rem;
+  text-align: end;
+  color: white;
+  width: 100px;
+}
+
+.wrapper .blog {
+  background-color: #e17b77;
+  width: 50px;
+  height: 50px;
+}
+
+.wrapper .blog:hover {
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.wrapper .linkedin {
+  width: 50px;
+  height: 50px;
+}
+
+.wrapper .linkedin:hover {
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.wrapper .facebook {
+  height: 50px;
+  width: 50px;
+}
+
+.wrapper .facebook:hover {
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.wrapper .twitter {
+  height: 50px;
+  width: 50px;
+}
+
+.wrapper .twitter:hover {
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.wrapper .github {
+  height: 50px;
+  width: 50px;
+}
+
+.wrapper .github:hover {
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+@media (min-width: 360px) {
+  .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[1];
+        grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 720px) {
+  .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+  .button {
+    margin-left: -150px;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    -ms-grid-row: 40;
+    grid-area: 40px;
+  }
+}
+/*# sourceMappingURL=Style.css.map */
