@@ -75,35 +75,28 @@ footer h3 {
   position: relative;
 }
 
+.grid-item span{
+  display: none;
+  position: absolute;
+  top: 200px;
+  left:200px;
+}
+
 .grid-item:hover {
-  background-color: black;
+  filter:grayscale(100%);
+  background-color: grey;
   position: relative;
   -webkit-transition-duration: 100ms;
           transition-duration: 100ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
+.grid-item:hover span{
+  display: block;
+}
 
 img {
   width: 100%;
-}
-
-.button {
-  position: absolute;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-top: 150px;
-  margin-left: -200px;
-  opacity: 0;
-}
-
-.button:hover {
-  -webkit-transition-duration: 100ms;
-          transition-duration: 100ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  opacity: 1;
 }
 
 .grid-item:hover img {
@@ -114,73 +107,59 @@ img {
           transition-timing-function: ease-in-out;
 }
 
-.social-media {
+.social-media{
   position: fixed;
   right: 0;
   top: 30px;
-}
-
-.wrapper {
-  font-size: 1rem;
-  text-align: end;
+  flex-direction: column;
+  justify-content: center;
   color: white;
-  width: 100px;
+  transform: translate(296px,0);
 }
 
-.wrapper .blog {
+.social-media a{
+  color: #fff;
+  background-color: rgb(61, 61, 71);
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  margin: 5px;
+  width:300px;
+  text-align: left;
+  transition: 1s;
+  transition-property: transform;
+}
+
+.social-media a:hover{
+transform: translateX(-200px);
+}
+
+.social-media i {
+  margin-right: 10px;
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.social-media a:nth-child(1) {
   background-color: #e17b77;
-  width: 50px;
-  height: 50px;
 }
 
-.wrapper .blog:hover {
-  width: 100px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+.social-media a:nth-child(2){
+  background-color: #00aced;
 }
 
-.wrapper .linkedin {
-  width: 50px;
-  height: 50px;
+.social-media a:nth-child(3){
+  background-color: #3b5998;
 }
 
-.wrapper .linkedin:hover {
-  width: 100px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+.social-media a:nth-child(4){
+  background-color: #007bb6;
 }
 
-.wrapper .facebook {
-  height: 50px;
-  width: 50px;
-}
-
-.wrapper .facebook:hover {
-  width: 100px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
-}
-
-.wrapper .twitter {
-  height: 50px;
-  width: 50px;
-}
-
-.wrapper .twitter:hover {
-  width: 100px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
-}
-
-.wrapper .github {
-  height: 50px;
-  width: 50px;
-}
-
-.wrapper .github:hover {
-  width: 100px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+.social-media a:nth-child(5){
+  background-color: #333;
 }
 
 @media (min-width: 360px) {
@@ -204,10 +183,6 @@ img {
         grid-template-rows: repeat(4, 1fr);
     grid-gap: 40px;
   }
-  .button {
-    margin-left: -150px;
-    margin-top: 100px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -220,6 +195,10 @@ img {
         grid-template-rows: repeat(3, 1fr);
     -ms-grid-row: 40;
     grid-area: 40px;
+  }
+  .grid-item span{
+    top: 50%;
+    left: 50%;
   }
 }
 /*# sourceMappingURL=Style.css.map */
