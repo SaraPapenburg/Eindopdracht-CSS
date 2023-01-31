@@ -1,6 +1,7 @@
 @import './variables';
 @import './universal';
 
+
 #card{
     font-family: sans-serif;
     background-color: #c3cfe2;
@@ -98,55 +99,8 @@ opacity: 1;
   position: fixed;
   right: 0;
   top: 30px;
-}
-
-.wrapper{
-  font-size: 1rem;
-  text-align: end;
-  color: white;
-  width: 100px;
-  .blog{
-  background-color: #e17b77;
-  width: 50px;
-  height: 50px;
-  &:hover {
-    width: 100px;
-    transition: width 2s;
-  }
-  }
-  .linkedin{
-    width: 50px;
-    height: 50px;
-    &:hover{
-      width: 100px;
-      transition: width 2s;
-    }
-  }
-  .facebook{
-    height: 50px;
-    width: 50px;
-    &:hover{
-      width: 100px;
-      transition: width 2s;
-    }
-  }
-  .twitter{
-      height: 50px;
-      width: 50px;
-      &:hover{
-        width: 100px;
-        transition: width 2s;
-      }
-  }
-  .github{
-      height: 50px;
-      width: 50px;
-      &:hover{
-        width: 100px;
-        transition: width 2s;
-      }
-    }
-
+  transform: translateY(50%);
+  z-index: 100;
 }
 
 @media(min-width:360px)
@@ -181,3 +135,4 @@ opacity: 1;
       grid-area: 40px;
     }
   }
+
